@@ -1,0 +1,375 @@
+.services {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+    padding: 8% 0% 90px 0%;
+    background-color: #FFF5EC;
+    @media(max-width: 1195px) {padding: 9% 0% 0% 0%;}
+    @media(max-width: 554px) {padding: 11.9% 0% 0% 0%;}
+    &__header-block {
+        margin-bottom: 9.6%;
+        @media(max-width: 1195px) {margin-bottom: 7%;}
+        @media(max-width: 554px) {margin-bottom: 0%;}
+    }
+    &:before {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        top: 454px;
+        @include adaptive-value("top", 454, 182, 1652, 1195);
+        left: 26px;
+        @include adaptive-value("left", 26, 0, 1652, 1195);
+        max-width: 1879px;
+        width: 100%;
+        height: 962px;
+        background: url('../img/services-dots.svg');
+        background-size: 100% 100%;
+        @media(max-width: 1190px) {display: none;}
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        min-height: 2.5em;
+        margin-right: 12.5% !important;
+        @media(max-width: 1195px) {margin-right: 10.6% !important;}
+        @media(max-width: 554px) {margin-bottom: -4.2%;}
+    }
+
+    &__subtitle {
+        @media(max-width: 554px) {display: none;}
+    }
+    
+    &__row {
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 6.5% 0% 0% 0%;
+        @media(max-width: 1190px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media(max-width: 554px) {padding-top: 26px;}
+    }
+
+    &__column {
+        width: 100%;
+
+        &:first-child {
+            flex: 0 0 auto;
+            width: 880px;
+            margin-right: 100px;
+            @include adaptive-value("width", 880, 605, 1652, 1195);
+            @include adaptive-value("margin-right", 100, 63, 1652, 1195);
+            @media(max-width: 1195px) {width: 605px;}
+            @media(max-width: 1190px) {
+                margin-right: 0;
+                margin-bottom: 35px;
+            }
+            @include adaptive-value("width", 880, 514, 1190, 554);
+            @include adaptive-value("width", 514, 280, 554, 320);
+        }
+        &:last-child {
+            display: flex;
+            justify-content: flex-end;
+            @media(max-width: 1190px) {justify-content: center;}
+        }
+    }
+
+    &__table {
+
+    }
+
+    &__free-food {
+
+    }
+
+    &__delivery {
+    }
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 1190px) {margin-bottom: 30px;}
+
+    &__img {
+        margin-right: 63px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        @include adaptive-value("padding-top", 95, 80, 1652, 1195);
+        @include adaptive-value("padding-bottom", 95, 80, 1652, 1195);
+        padding-right: 95px;
+        padding-left: 95px;
+        @include adaptive-value("padding-left", 95, 80, 1652, 1195);
+        @include adaptive-value("padding-right", 95, 80, 1652, 1195);
+        @media(max-width: 1195px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+        @media(max-width: 1190px) {margin-right: 35px;}
+        @include adaptive-value("margin-right", 35, 15, 554, 320);
+        @include adaptive-value("padding-top", 80, 30, 554, 320);
+        @include adaptive-value("padding-bottom", 80, 30, 554, 320);
+        @include adaptive-value("padding-left", 80, 30, 554, 320);
+        @include adaptive-value("padding-right", 80, 30, 554, 320);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 61px;
+        
+        @include adaptive-value("padding-left", 61, 24, 1652, 1195);
+        @include adaptive-value("padding-left", 24, 10, 1000, 554);
+    }
+
+    &__title {
+        position: relative;
+        max-width: 209px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.35em;
+        text-transform: capitalize;
+        color: #2E266F;
+        margin-bottom: 12px;
+        @media(max-width: 554px) {margin-bottom: 6%;}
+        @include adaptive-value("font-size", 24, 14, 554, 320);
+        &:before {
+            position: absolute;
+            content: '';
+            right: 103%;
+            bottom: 8%;
+            width: 182px;
+            @include adaptive-value("width", 182, 109, 1652, 1195);
+            @include adaptive-value("width", 109, 73, 1195, 554);
+            @include adaptive-value("width", 73, 35, 554, 320);
+            height: 20px;
+            background: url('../img/icons/arrow.svg') no-repeat;
+            @media(max-width: 1995px) {right: 106%;}
+            @media(max-width: 500px) {bottom: 0%;}
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            right: 7%;
+            bottom: 23%;
+            width: 84px;
+            height: 3px;
+            background-color: #FE043C;
+            @include adaptive-value("width", 84, 45, 554, 320);
+        }
+    }
+
+    &__subtitle {
+        max-width: 199px;
+        font-size: 14px;
+        line-height: 1.75em;
+        text-transform: capitalize;
+        color: #707070;
+        background-color: #FFF5EC;
+        @include adaptive-value("font-size", 14, 10, 554, 320);
+    }
+}
+
+.free-food {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 63px;
+        @media(max-width: 1190px) {margin-right: 34px;}
+        @include adaptive-value("margin-right", 34, 15, 554, 320);
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 160px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.35em;
+        text-transform: capitalize;
+        color: #2E266F;
+        margin-bottom: 12px;
+        @media(max-width: 554px) {margin-bottom: 6%;}
+        @include adaptive-value("font-size", 24, 14, 554, 320);
+        &:before {
+            position: absolute;
+            content: '';
+            left: 250px;
+            @include adaptive-value("left", 250, 219, 1652, 1195);
+            @include adaptive-value("left", 219, 250, 1195, 1060);
+            @include adaptive-value("left", 219, 192, 1195, 554);
+            @include adaptive-value("left", 192, 107, 554, 320);
+            bottom: 24%;
+            width: 267px;
+            @include adaptive-value("width", 267, 144, 1652, 1195);
+            @media(max-width: 1190px) {width: 250px;}
+            @include adaptive-value("width", 280, 81, 1190, 554);
+            @include adaptive-value("width", 81, 35, 554, 320);
+            height: 2px;
+            background-color: #FE043C;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0%;
+            bottom: 23%;
+            width: 84px;
+            height: 3px;
+            background-color: #FE043C;
+            @include adaptive-value("width", 84, 45, 554, 320);
+        }
+        & span {
+            position: relative;
+            display: block;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 12px;
+                left: 405px;
+                width: 10px;
+                height: 2px;
+                background-color: #FE043C;
+                transform: rotateZ(45deg);
+                @include adaptive-value("left", 405, 251, 1652, 1195);
+                @include adaptive-value("left", 385, 162, 1190, 554);
+                @include adaptive-value("left", 162, 71, 554, 320);
+                @include adaptive-value("top", 12, 3, 554, 320);
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 18px;
+                left: 405px;
+                width: 10px;
+                height: 2px;
+                background-color: #FE043C;
+                transform: rotateZ(-45deg);
+                @include adaptive-value("left", 405, 251, 1652, 1195);
+                @include adaptive-value("left", 385, 162, 1190, 554);
+                @include adaptive-value("left", 162, 71, 554, 320);
+                @include adaptive-value("top", 18, 11, 554, 320);
+            }
+        }
+    }
+
+    &__subtitle {
+        max-width: 199px;
+        font-size: 14px;
+        line-height: 1.75em;
+        text-transform: capitalize;
+        color: #707070;
+        background-color: #FFF5EC;
+        @include adaptive-value("font-size", 14, 10, 554, 320);
+    }
+
+    &__img {
+        padding-top: 114px;
+        padding-bottom: 113px;
+        @include adaptive-value("padding-top", 114, 81, 1652, 1195);
+        @include adaptive-value("padding-bottom", 114, 81, 1652, 1195);
+        padding-right: 95px;
+        padding-left: 95px;
+        @include adaptive-value("padding-left", 95, 62, 1652, 1195);
+        @include adaptive-value("padding-right", 95, 62, 1652, 1195);
+        @media(max-width: 1195px) {
+            padding-top: 81px;
+            padding-bottom: 81px;
+            padding-right: 62px;
+            padding-left: 62px;
+        }
+        @include adaptive-value("padding-top", 81, 30, 554, 320);
+        @include adaptive-value("padding-bottom", 81, 30, 554, 320);
+        @include adaptive-value("padding-left", 62, 20, 554, 320);
+        @include adaptive-value("padding-right", 62, 20, 554, 320);
+    }
+}
+
+.delivery {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 672px;
+    width: 100%;
+    background-color: #FFEDDE;
+    @include adaptive-value("height", 758, 550, 1190, 554);
+    @include adaptive-value("height", 550, 334, 554, 320);
+    @include adaptive-value("max-width", 670, 462, 1190, 554);
+    padding-top: 163px;
+    @include adaptive-value("padding-top", 163, 105, 1652, 1195);
+    @media(max-width: 1195px) {padding-top: 105px;}
+    @include adaptive-value("padding-top", 105, 40, 554, 320);
+
+    &__img {
+        max-width: 322px;
+        @media(max-width: 554px) {max-width: 212px;}
+        margin-bottom: 87px;
+        @include adaptive-value("margin-bottom", 87, 41, 1652, 1195);
+        @media(max-width: 1195px) {margin-bottom: 33px;}
+        @media(max-width: 554px) {margin-bottom: 8%;}
+        margin-left: 125px;
+        margin-right: 125px;
+        @include adaptive-value("margin-left", 125, 70, 554, 320);
+        @include adaptive-value("margin-right", 125, 70, 554, 320);
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        max-width: 244px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.35em;
+        text-transform: capitalize;
+        color: #2E266F;
+        margin-bottom: 12px;
+        @media(max-width: 554px) {margin-bottom: 5%;}
+        @include adaptive-value("font-size", 24, 16, 554, 320);
+        @include adaptive-value("max-width", 244, 160, 554, 320);
+    }
+
+    &__subtitle {
+        position: relative;
+        max-width: 199px;
+        font-size: 14px;
+        line-height: 1.75em;
+        text-transform: capitalize;
+        color: #707070;
+        @include adaptive-value("font-size", 14, 10, 554, 320);
+        @include adaptive-value("max-width", 199, 140, 554, 320);
+        &:after {
+            position: absolute;
+            bottom: -39%;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 192px;
+            @include adaptive-value("width", 192, 120, 554, 320);
+            height: 3px;
+            background-color: #FE043C;
+        }
+    }
+}

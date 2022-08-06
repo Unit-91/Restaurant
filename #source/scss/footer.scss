@@ -1,0 +1,230 @@
+.footer {
+    margin: 0 auto;
+    max-width: 1920px;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFF5EC;
+    padding: 14.1% 0px 0px 0px;
+    text-align: center;
+    @media(max-width: 1195px) {padding: 9.85% 0px 0px 0px;}
+    @media(max-width: 554px) {padding: 56px 0px 0px 0px;}
+    @media(max-width: 500px) {padding: 56px 0px 30px 0px;}
+    &:before {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        top: 72px;
+        @include adaptive-value("top", 72, -22, 1920, 1195);
+        @include adaptive-value("top", -22, -29, 1195, 554);
+        @media(max-width: 500px) {top: -40px;}
+        left: -54px;
+        @include adaptive-value("left", -54, -276, 1920, 1195);
+        @include adaptive-value("left", -276, -343.5, 1195, 554);
+        @media(max-width: 500px) {left: -380px;}
+        width: 750px;
+        height: 875px;
+        @include adaptive-value("height", 875, 645, 1920, 1195);
+        @include adaptive-value("height", 645, 325, 1195, 554);
+        @media(max-width: 500px) {height: 400px;}
+        background: url(../img/footer-plant.svg);
+        background-size: 100% 100%;
+    }
+    &:after {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        top: 110px;
+        @include adaptive-value("top", 110, 45, 1920, 1195);
+        @media(max-width: 554px) {top: 70px;}
+        left: 4px;
+        @include adaptive-value("left", 4, 45, 1920, 1195);
+        @media(max-width: 554px) {left: -15px;}
+        width: 745px;
+        @include adaptive-value("width", 745, 571, 1920, 1195);
+        @media(max-width: 1195px) {width: 571px;}
+        height: 836.28px;
+        @include adaptive-value("height", 836.28, 534, 1920, 1195);
+        @media(max-width: 1195px) {height: 534px;}
+        background: url('../img/footer-dots.svg');
+        background-size: 100% 100%;
+        @media(max-width: 500px) {display: none;}
+    }
+
+    &__title {
+        z-index: 1;
+        max-width: 535px;
+        font-size: 36px;
+        line-height: 1.36em;
+        text-transform: capitalize;
+        color: #2E266F;
+        margin-bottom: 24px;
+        @include adaptive-value("font-size", 36, 24, 1060, 554);
+        @media(max-width: 554px) {margin-bottom: 23px;}
+        @media(max-width: 500px) {font-size: 22px;}
+        & span {
+            display: block;
+            @include adaptive-value("font-size", 36, 24, 1060, 554);
+            @media(max-width: 500px) {font-size: 22px;}
+        }
+    }
+
+    &__subtitle {
+        z-index: 1;
+        max-width: 535px;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #707070;
+        margin-bottom: 60px;
+        @media(max-width: 1195px) {margin-bottom: 29px;}
+        @media(max-width: 554px) {
+            max-width: 415px;
+            margin-bottom: 25px;
+        }
+        @media(max-width: 500px) {font-size: 12px;}
+    }
+
+    &__form {
+        z-index: 1;
+        max-width: 564px;
+        width: 100%;
+        height: 90px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 100px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        margin-bottom: 65px;
+        @media(max-width: 1195px) {margin-bottom: 36px;}
+        @media(max-width: 700px) {
+            max-width: 385px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 37px;
+        }
+        @include adaptive-value("height", 90, 60, 1060, 554);
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        &::placeholder {
+            font-size: 16px;
+            color: #2E266F;
+            opacity: 0.6;
+        }
+        @media(max-width: 700px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    &__button {
+        flex: 0 0 auto;
+        width: 11%;
+        height: 65%;
+        border-radius: 50%;
+        background-color: #FE043C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img {
+            object-fit: cover;
+            width: 40%;
+            @media(max-width: 1060px) {width: 55%;}
+        }
+    }
+
+    &__menu {
+        z-index: 1;
+        margin-bottom: 7.4%;
+        @media(max-width: 1250px) {margin-bottom: 41px;}
+        @media(max-width: 700px) {margin-bottom: 27px;}
+    }
+
+    &__links {
+        display: flex;
+        @media(max-width: 500px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        padding-left: 15px;
+        padding-right: 15px;
+        @media(max-width: 700px) {
+            padding-left: 13.5px;
+            padding-right: 13.5px;
+        }
+        @media(max-width: 500px) {margin-bottom: 10px;}
+        & a {
+            font-size: 16px;
+            color: #707070;
+            @media(max-width: 700px) {font-size: 14px;}
+        }
+    }
+
+    &__bottom {
+        max-width: 1522px;
+        padding: 4.1% 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media(max-width: 1250px) {
+            max-width: 1070px;
+            padding: 1% 0px;
+        }
+        @media(max-width: 554px) {justify-content: center;}
+        @media(max-width: 500px) {flex-wrap: wrap;}
+    }
+
+    &__social {
+        max-width: 149px;
+        width: 100%;
+        margin-right: 96px;
+        @media(max-width: 1250px) {
+            max-width: 110px;
+            margin-right: 43px;
+        }
+        @media(max-width: 386px) {
+            margin-left: 43px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__social-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__social-link {
+        @media(max-width: 1195px) {
+            width: 18px;
+            height: 15px;
+        }
+        & a {
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        @media(max-width: 1250px) {font-size: 14px;}
+        & span {
+            font-size: 18px;
+            margin-right: 7px;
+        }
+    }
+}

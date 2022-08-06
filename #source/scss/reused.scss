@@ -1,0 +1,105 @@
+.header-block {
+    width: 100%;
+    display: flex;
+    @media(max-width: 1190px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media(max-width: 554px) {
+        align-items: flex-start;
+    }
+}
+
+.title {
+    position: relative;
+    flex: 0 0 auto;
+    padding-left: 56px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.3em;
+    text-transform: capitalize;
+    color: #2E266F;
+    max-width: 14em;
+    margin-right: 10.25%;
+    @media(max-width: 1195px) {
+        padding-left: 5%;
+        margin-right: 8.1%;
+    }
+    @include adaptive-value("font-size", 48, 36, 1195, 554);
+    @media(max-width: 1190px) {
+        margin-right: 0;
+        max-width: 18em;
+    }
+    @media(max-width: 1000px) {max-width: 14em;}
+    @media(max-width: 554px) {
+        line-height: 1.34em;
+        padding-left: 6.2%;
+    }
+    @include adaptive-value("font-size", 36, 24, 554, 320);
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: -6%;
+        left: 0.3%;
+        height: 2.9em;
+        width: 0.5em;
+        background-color: #FE043C;
+        @media(max-width: 554px) {width: 0.35em;}
+    }
+}
+
+.subtitle {
+    padding-top: 1.15%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #707070;
+    max-width: 44em;
+    @media(max-width: 1190px) {
+        padding-left: 6%;
+        padding-right: 3%;
+        max-width: 60em;
+    }
+    @media(max-width: 1000px) {
+        max-width: 609px;
+        max-width: 42em;
+    }
+    @media(max-width: 554px) {
+        font-size: 14px;
+        line-height: 24px;
+        padding-top: 2.5%;
+    }
+    @media(max-width: 450px) {font-size: 12px;}
+
+    &_short {
+        display: none;
+        @media(max-width: 554px) {display: block;}
+    }
+}
+
+.img {
+    max-width: 390px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFEDDE;
+    
+    &__wrapper {
+        max-width: 199px;
+        width: 100%;
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.text {
+    flex: 0 0 auto;
+    width: 390px;
+    @include adaptive-value("width", 390, 271, 1590, 1195);
+    @include adaptive-value("width", 390, 209, 1190, 554);
+    @include adaptive-value("width", 209, 120, 554, 320);
+}
